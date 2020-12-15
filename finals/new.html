@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>食遍天下</title>
+  <style type="text/css">
+    #box {
+      width: 1500px;
+      height: 735px;
+      background: url("./images/background1.jpg") repeat;
+      background-size: 100% 100%;
+    }
+
+    #frame {
+      float: left;
+      width: 400px;
+      height: 500px;
+      margin-top: 80px;
+      margin-left: 80px;
+      border: 2px solid rgb(65, 119, 103);
+      background-color: rgb(214, 224, 116)
+    }
+
+    .boxthree {
+      border: 2px solid rgb(141, 137, 137);
+      width: 300px;
+      height: 50px;
+      margin: 20px 40px 0px;
+    }
+
+    .textbox {
+      width: 260px;
+      height: 50px;
+      padding: 0px 20px;
+      border: 2px solid rgb(65, 119, 103);
+      outline: none;
+    }
+
+    .textbox3 {
+      width: 150px;
+      height: 48px;
+      padding: 0px 20px;
+      border: 2px solid rgb(65, 119, 103);
+      outline: none;
+    }
+
+    .tips {
+      width: 200px;
+      height: 20px;
+      font-size: 10px;
+      color: rgb(134, 123, 123);
+      padding-left: 40px;
+      text-align: left;
+    }
+
+    #getCode {
+      width: 100px;
+      height: 50px;
+      background-color: cornsilk;
+      font-size: 15px;
+    }
+
+    #btn {
+      background: rgb(123, 182, 108);
+      border: rgb(151, 163, 107);
+      color: #fff;
+      width: 300px;
+      height: 50px;
+      margin-left: 40px;
+      margin-top: 20px;
+      font-size: 20px;
+    }
+
+    #start {
+      background: rgb(123, 182, 108);
+      border: rgb(151, 163, 107);
+      color: #fff;
+      width: 300px;
+      height: 50px;
+      margin-left: 40px;
+      margin-top: 5px;
+      font-size: 20px;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    li {
+      list-style: none;
+    }
+
+    .clear::after {
+      content: '';
+      height: 0;
+      display: block;
+      clear: both;
+    }
+
+    .container {
+      width: 1200px;
+      margin: 0 auto;
+    }
+
+    .header {
+      height: 100px;
+      background: white;
+      border: 2px solid orange;
+    }
+
+    .logo {
+      margin-top: 10px;
+      float: left;
+      height: 60px;
+      width: 200px;
+    }
+
+    .nav {
+      float: left;
+      width: 600px;
+    }
+
+    .nav li {
+      float: left;
+    }
+
+    .nav li a {
+      display: block;
+      width: 100px;
+      text-align: center;
+      padding: 24px 0;
+      font-size: 20px;
+      color: black;
+      border-bottom: 3px solid white;
+    }
+
+    .nav li a:hover {
+      color: orange;
+      border-color: orange;
+    }
+
+    .form {
+      width: 320px;
+      height: 50px;
+      float: left;
+      margin-top: 30px;
+      border: 2px solid orange;
+
+    }
+
+    #search {
+      width: 180px;
+      height: 40px;
+      font-size: 20px;
+      border: coral;
+
+    }
+
+    .product {
+      height: 1500px;
+      height: 1300px;
+      margin-top: 40px;
+      padding-top: 20px;
+      background-color: rgb(238, 206, 99);
+      background-size: 100% 100%;
+    }
+
+    .container2 p {
+      width: 1480px;
+      font-size: 18px;
+      text-align: left;
+      font-family: Microsoft YaHei;
+      font-weight: 400;
+      color: black;
+      padding-top: 10px;
+      padding-left: 10px;
+      padding-bottom: 10px;
+      line-height: 30px;
+    }
+
+    .visa {
+      float: left;
+      width: 1480px;
+      padding-left: 15px;
+      border: 2px solid orange;
+    }
+
+    .visa li {
+      float: left;
+      margin-bottom: 4px;
+      margin-left: 4px;
+    }
+
+    .visa img {
+      width: 200px;
+      height: 150px;
+    }
+
+    .product li {
+      position: relative;
+    }
+
+    .product visa p {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 47px;
+      line-height: 47px;
+      font-size: 18px;
+      padding-left: 38px;
+    }
+
+    .product span {
+      display: inline-block;
+      font-size: 26px;
+      margin-left: 10px;
+    }
+
+    .introudction {
+      width: 1490px;
+      padding-top: 20px;
+      height: 500px;
+      border: 2px solid orange;
+    }
+
+    .photo {
+      width: 600px;
+      height: 500px;
+      float: left;
+      padding-left: 30px;
+      margin-top: 10px;
+    }
+
+    .photo img {
+      width: 500px;
+      height: 400px;
+    }
+
+    .word {
+      float: left;
+      width: 800px;
+      height: 500px;
+      font-family: Microsoft YaHei;
+      color: black;
+    }
+
+    .word h2 {
+      text-align: center;
+    }
+
+    .word ul {
+      font-size: 20px;
+      line-height: 20px;
+    }
+
+    .word p {
+      font-size: 20px;
+
+    }
+
+    .footer {
+      height: 120px;
+      background: #000;
+      color: #fff;
+    }
+
+    .title {
+      color: rgb(243, 184, 74);
+      width: 820px;
+      margin-left: 20px;
+      padding-top: 50px;
+      font-size: 20px;
+    }
+
+    .con {
+      width: 1200px;
+      border: 1px solid black;
+      margin: 0 auto;
+      overflow: hidden;
+      height: 100px;
+    }
+
+    .up {
+      display: none;
+      width: 50px;
+      height: 40px;
+      position: fixed;
+      right: 10px;
+      bottom: 20px;
+    }
+
+    .pro {
+      width: 220px;
+      height: 352px;
+      border: solid 1px #ccc;
+      float: left;
+      margin: 5px;
+    }
+
+    body {
+      margin: 0px;
+      padding: 0px;
+      font-family: "微软雅黑";
+    }
+
+    #pros {
+      width: 1510px;
+      height: 720px;
+    }
+
+    .pro-pic {
+      width: 220px;
+      height: 220px;
+    }
+
+    .pro-price {
+      width: 100px;
+      height: 30px;
+      margin: 0px auto;
+      text-align: center;
+      line-height: 30px;
+      color: red;
+      font-size: 20px;
+    }
+
+    .pro-title {
+      width: 200px;
+      height: 45px;
+      margin: 5px auto;
+      text-align: center;
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    .pro-btn a {
+      width: 100px;
+      height: 34px;
+      background-color: orange;
+      display: block;
+      margin: 0px auto;
+      color: #fff;
+      text-align: center;
+      line-height: 34px;
+      text-decoration: none;
+      font-size: 14px;
+      border-radius: 10px;
+    }
+
+    #car {
+      width: 72px;
+      height: 63px;
+      background-image: url("./images/car.jpg");
+      position: fixed;
+      right: 0px;
+      top: 180px;
+    }
+
+    #pro-num {
+      width: 30px;
+      height: 30px;
+      background-color: orange;
+      text-align: center;
+      line-height: 30px;
+      border-radius: 100%;
+      font-size: 12px;
+      color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="box">
+    <div id="frame">
+      <div class="boxthree">
+        <input class="textbox" id="username" type="username" type="text" name="username" value="" placeholder="用户名"
+          style="border: 0px;" />
+      </div>
+      <p class="tips"></p>
+      <div class="boxthree">
+        <input class="textbox" id="password" type="password" name="keyword" value="" placeholder="设置密码"
+          style="border: 0px;" />
+      </div>
+      <p class="tips"></p>
+
+      <div class="boxthree">
+        <input class="textbox3" id="code" type="text" placeholder="验证码">
+        <button id="getCode" class="getCode">获取验证码</button>
+      </div>
+      <p class="tips"></p>
+      <p class="tips" class="notice"></p>
+      <button id="btn">立即注册</button>
+      <button id="start">进入界面</button>
+    </div>
+  </div>
+  <div id="demo">
+    <div class="header">
+      <div class="container">
+        <img src="美食/logo.png" alt="" class="logo">
+        <ul class="nav clear">
+          <li><a href="#" id="one"> 首页</a></li>
+          <li><a href="http://baijiahao.baidu.com/s?id=1684237045498693718&wfr=spider&for=pc" id="two">热门美食</a></li>
+          <li><a href="http://baijiahao.baidu.com/s?id=1676065961989309379&wfr=spider&for=pc" id="three">新品推荐</a></li>
+          <li><a href="#" id="four">爆款预订</a></li>
+          <li><a href="#" id="five">客服咨询</a></li>
+        </ul>
+        <form class="form clear">
+          <input style=" outline: none;" type="text" id="search" placeholder="美食名称/地名" name="search">
+        </form>
+      </div>
+    </div>
+    <div class="product">
+      <div class="container2 clear">
+        <p>
+          美食，顾名思义就是美味的食物，贵的有山珍海味，便宜的有街边小吃。其实美食是不分贵贱的，只要是自己喜欢的，都可以称之为美食。中国素有“烹饪王国”这个美誉。在中国这个大家庭里，有五十六个小家庭，每个家庭都有自己的特色美食。美食吃前有期待、吃后有回味，享受美食也要看场合，场合好美食吃起来才有味道。世界各地美食文化博大精深，营养物质各不相同，品味更多美食，享受更多健康，也让人吃的更加开心。
+          美食不仅仅是餐桌上的食物。还包括休闲零食、各种饼干、糕点、糖类，蜜饯、干果、肉制食品、茶饮冲泡等制品，各有各的风味，都可称之为美食。</p>
+      </div>
+      <div class="visa">
+        <ul class="clear">
+          <li><img src="美食/绍兴腐乳.jpg" alt="">
+            <p>浙江：绍兴腐乳 </p>
+          </li>
+          <li><img src="美食/鸭血粉丝 (1).jpg" alt="">
+            <p>江苏：鸭血粉丝 </p>
+          </li>
+          <li><img src="美食/八宝肉圆 (1).jpg" alt="">
+            <p>安徽：八宝肉圆 </p>
+          </li>
+          <li><img src="美食/瓦罐煨汤 (1).jpg" alt="">
+            <p>江西：瓦罐煨汤 </p>
+          </li>
+          <li><img src="美食/南翔小笼包.jpg" alt="">
+            <p>上海：南翔小笼包 </p>
+          </li>
+          <li><img src="美食/煎饼果子.jpg" alt="">
+            <p>天津：煎饼果子 </p>
+          </li>
+          <li><img src="美食/锅贴饺子.jpg" alt="">
+            <p>保定：锅贴饺子 </p>
+          </li>
+          <li> <img src="美食/刀削面.jpg" alt="">
+            <p>山西：刀削面</p>
+          </li>
+          <li><img src="美食/内蒙古奶茶.jpg" alt="">
+            <p>内蒙古：奶茶</p>
+          </li>
+          <li><img src="美食/老边饺子.jpg" alt="">
+            <p>辽宁：老边饺子</p>
+          </li>
+          <li><img src="美食/熏肉大饼.jpg" alt="">
+            <p>吉林:熏肉大饼</p>
+          </li>
+          <li><img src="美食/蟹黄汤包.jpg" alt="">
+            <p>安徽:蟹黄汤包</p>
+          </li>
+          <li> <img src="美食/北京烤鸭.jpg" alt="">
+            <p>北京：烤鸭</p>
+          </li>
+          <li><img src="美食/重庆火锅.jpg" alt="">
+            <p>重庆：火锅</p>
+          </li>
+        </ul>
+      </div>
+
+      <div class="introdction">
+        <div class="photo">
+          <img src="美食/武汉热干面.jpg" alt="">
+          <p>武汉热干面</p>
+        </div>
+        <div class="word">
+          <h2>如何在家自制好吃的热干面</h2>
+          <br />
+          <p>食材准备：面条 150g&nbsp花生 10g&nbsp萝卜丁 20g&nbsp生抽 少许&nbsp芝麻酱 少许&nbsp蚝油 少许&nbsp麻油 少许&nbsp花椒粉 少许&nbsp辣椒油 少许&nbsp鸡精
+            少许&nbsp葱花 少许&nbsp 香菜 按个人口味</p>
+          <br />
+          <ul>
+            <li>1.面条上锅蒸5分钟。</li>
+            <li>2.花生米压碎，萝卜干切丁，香菜切碎。</li>
+            <li>3.面条蒸熟放油搅拌。</li>
+            <li>4.空碗中放芝麻酱，蚝油，生抽，麻油，花椒粉，鸡精，加热水搅匀。</li>
+            <li>5.面条煮30秒盛出将调好的酱和花生碎和咸菜倒入拌好。</li>
+          </ul>
+          <br />
+          <p>美味的热干面就做好啦！在家自制热干面你get了吗？</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="con">
+        <div class="title">
+          欢迎来到食遍中国网站，在这里你可以看到各地的特色美食，希望你可以得到奇妙的阅读体验
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sale">
+    <div id="pros">
+      <div class="pro">
+        <div><img class="pro-pic" src="美食/西湖醋鱼.jpg"></div>
+        <div class="pro-price">¥49.00</div>
+        <div class="pro-title">西湖醋鱼</div>
+        <div class="pro-btn"><a href="javascript:;">加入购物车</a></div>
+      </div>
+      <div class="pro">
+        <div><img class="pro-pic" src="美食/蟹黄汤包.jpg"></div>
+        <div class="pro-price">¥79.00</div>
+        <div class="pro-title">蟹黄汤包</div>
+        <div class="pro-btn"><a href="javascript:;">加入购物车</a></div>
+      </div>
+      <div class="pro">
+        <div><img class="pro-pic" src="美食/武汉热干面.jpg"></div>
+        <div class="pro-price">¥9.00</div>
+        <div class="pro-title">武汉热干面</div>
+        <div class="pro-btn"><a href="javascript:;">加入购物车</a></div>
+      </div>
+      <div class="pro">
+        <div><img class="pro-pic" src="美食/煎饼果子.jpg"></div>
+        <div class="pro-price">¥9.00</div>
+        <div class="pro-title">煎饼果子</div>
+        <div class="pro-btn"><a href="javascript:;">加入购物车</a></div>
+      </div>
+      <div class="pro">
+        <div><img class="pro-pic" src="美食/瓦罐煨汤 (1).jpg"></div>
+        <div class="pro-price">¥79.00</div>
+        <div class="pro-title">瓦罐煨汤</div>
+        <div class="pro-btn"><a href="javascript:;">加入购物车</a></div>
+      </div>
+      <div class="pro">
+        <div><img class="pro-pic" src="美食/重庆火锅.jpg"></div>
+        <div class="pro-price">¥179.00</div>
+        <div class="pro-title">重庆火锅</div>
+        <div class="pro-btn"><a href="javascript:;">加入购物车</a></div>
+      </div>
+      <div class="pro">
+        <div><img class="pro-pic" src="美食/绍兴腐乳.jpg"></div>
+        <div class="pro-price">¥19.00</div>
+        <div class="pro-title">绍兴腐乳</div>
+        <div class="pro-btn"><a href="javascript:;">加入购物车</a></div>
+      </div>
+      <div class="pro">
+        <div><img class="pro-pic" src="美食/北京烤鸭.jpg"></div>
+        <div class="pro-price">¥59.00</div>
+        <div class="pro-title">北京烤鸭</div>
+        <div class="pro-btn"><a href="javascript:;">加入购物车</a></div>
+      </div>
+      <div class="pro">
+        <div><img class="pro-pic" src="美食/老边饺子.jpg"></div>
+        <div class="pro-price">¥39.00</div>
+        <div class="pro-title">老边饺子</div>
+        <div class="pro-btn"><a href="javascript:;">加入购物车</a></div>
+      </div>
+      <div class="pro">
+        <div><img class="pro-pic" src="美食/八宝肉圆 (1).jpg"></div>
+        <div class="pro-price">¥34.00</div>
+        <div class="pro-title">八宝肉圆</div>
+        <div class="pro-btn"><a href="javascript:;">加入购物车</a></div>
+      </div>
+      <div class="pro">
+        <div><img class="pro-pic" src="美食/刀削面.jpg"></div>
+        <div class="pro-price">¥37.00</div>
+        <div class="pro-title">刀削面</div>
+        <div class="pro-btn"><a href="javascript:;">加入购物车</a></div>
+      </div>
+      <div class="pro">
+        <div><img class="pro-pic" src="美食/熏肉大饼.jpg"></div>
+        <div class="pro-price">¥39.00</div>
+        <div class="pro-title">熏肉大饼</div>
+        <div class="pro-btn"><a href="javascript:;">加入购物车</a></div>
+      </div>
+    </div>
+    <div id="car">
+      <div id="pro-num">0</div>
+    </div>
+    <button style=" width: 100px; height: 30px;background-color: palegoldenrod; font-size: 20px;"
+      id="return">返回首页</button>
+  </div>
+
+  <div id="top" class="up" onclick="goTop()">
+    <img src="images/返回.jpg" alt="">
+  </div>
+
+
+</body>
+<script>
+  document.getElementById('sale').style.display = 'none';
+  document.getElementById('demo').style.display = 'none';
+  document.getElementById('start').style.display = 'none';
+  var getCode = document.getElementById("getCode");
+  var random, random1, random2, random3, random4;
+  getCode.onclick = function () {
+    random1 = parseInt(Math.random() * 10);
+    random2 = parseInt(Math.random() * 10);
+    random3 = parseInt(Math.random() * 10);
+    random4 = parseInt(Math.random() * 10);
+    random = 1000 * random1 + 100 * random2 + 10 * random3 + random4;
+    alert("验证码为" + random);
+  }
+  var textbox = document.getElementsByClassName('textbox');
+  var tips = document.getElementsByClassName('tips');
+  var information = document.getElementsByClassName('information');
+  textbox[0].onfocus = function () {
+    tips[0].innerHTML = "请输入4-10位用户名";
+  }
+  textbox[0].onblur = function () {
+    if (textbox[0].value == "") {
+      tips[0].innerHTML = "密码不能为空";
+    }
+    else {
+      tips[0].innerHTML = "";
+    }
+  }
+  textbox[1].onfocus = function () {
+    tips[1].innerHTML = "请输入6-12位密码";
+  }
+  textbox[1].onblur = function () {
+    if (textbox[1].value == "") {
+      tips[1].innerHTML = "密码不能为空";
+    }
+    else {
+      tips[1].innerHTML = "";
+    }
+  }
+  var btn = document.getElementById('btn');
+  var username = document.getElementById('username');
+  var password = document.getElementById('password');
+  var code = document.getElementById('code');
+  btn.onclick = function () {
+    if (username.value.length > 10 || username.value.length < 4)
+      tips[0].innerHTML = "用户名位数不对";
+    else if (password.value.length > 16 || password.value.length < 6)
+      tips[1].innerHTML = "密码位数不对";
+    else if (code.value != random)
+      tips[2].innerHTML = "验证码错误";
+    else {
+      alert("注册成功！");
+      document.getElementById('start').style.display = 'block';
+    }
+  }
+  start.onclick = function () {
+    document.getElementById('box').style.display = 'none';
+    document.getElementById('demo').style.display = 'block';
+  }
+
+  document.getElementById("four").onclick = function () {
+    document.getElementById('sale').style.display = 'block';
+    document.getElementById('demo').style.display = 'none';
+
+  }
+  document.getElementById("return").onclick = function () {
+    document.getElementById('sale').style.display = 'none';
+    document.getElementById('demo').style.display = 'block';
+  }
+  document.getElementById("five").onclick = function () {
+    herf = prompt("请输入你想要的咨询的内容：");
+    if (herf != "") {
+      alert("提交成功！");
+    }
+    else {
+      alert("输入内容不能为空！");
+    }
+    document.getElementById('demo').style.display = 'block';
+  }
+  function goTop() {
+    var odiv = document.getElementById("top");
+    //将滚动距离设置为0，兼容性写法
+    document.documentElement.scrollTop = document.body.scrollTop = 0;
+  }
+  window.onscroll = function () {
+    var odiv = document.getElementById("top");
+    //获取垂直滚动条的滚动距离，兼容性写法
+    var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+    if (scrollTop > 300) {
+      odiv.style.display = "block";
+    } else {
+      odiv.style.display = "none"
+    }
+  }
+  var title = document.getElementsByClassName("title");
+  title[0].style.marginLeft = "20px";
+  var move = setInterval(function () {
+    var marginLeft = parseInt(title[0].style.marginLeft);
+    if (marginLeft >= 200) {
+      title[0].style.marginLeft = "0";
+      marginLeft = "0";
+    }
+    title[0].style.marginLeft = (marginLeft + 1) + "px";
+
+  }, 10)
+  var btns = document.getElementsByClassName("pro-btn");
+  var car = document.getElementById("car");
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].onclick = function () {
+      var oldImg = this.parentNode.firstElementChild.firstElementChild;
+      var imgNode = document.createElement("img");
+      imgNode.src = oldImg.src;
+      imgNode.style.position = "absolute";
+      imgNode.style.left = oldImg.offsetLeft + "px";
+      imgNode.style.top = oldImg.offsetTop + "px";
+      imgNode.style.width = oldImg.offsetWidth + "px";
+      imgNode.style.height = oldImg.offsetHeight + "px";
+      document.body.appendChild(imgNode);
+      animate(imgNode, {
+        left: car.offsetLeft,
+        top: car.offsetTop + document.documentElement.scrollTop,
+        width: 20,
+        height: 20,
+        opacity: 10
+      }, function () {
+        document.body.removeChild(imgNode);
+        car.firstElementChild.innerHTML = parseInt(car.firstElementChild.innerHTML) + 1;
+      })
+    }
+  }
+  function getStyle(obj, attr) {
+    if (obj.currentStyle) {
+      return obj.currentStyle[attr];
+    } else {
+      return getComputedStyle(obj, null)[attr];
+    }
+  }
+  function animate(obj, json, callback) {
+    var isStop = true;
+    clearInterval(obj.timer);
+    obj.timer = setInterval(function () {
+      isStop = true;
+      for (var attr in json) {
+        var now = 0;
+        if (attr == 'opacity') {
+          now = parseInt(getStyle(obj, attr) * 100);
+        } else {
+          now = parseInt(getStyle(obj, attr));
+        }
+        var speed = (json[attr] - now) / 8;
+        speed = speed > 0 ? Math.ceil(speed) : Math.floor(speed);
+        var cur = now + speed;
+        if (attr == 'opacity') {
+          obj.style[attr] = cur / 100;
+          obj.style['filter'] = "alpha(opacity=" + cur + ")";
+        } else {
+          obj.style[attr] = cur + 'px';
+        }
+        if (json[attr] == cur) {
+          delete json[attr];
+        }
+        console.log(json);
+      }
+      if (JSON.stringify(json) == "{}") {
+        clearInterval(obj.timer);
+        callback && callback();
+      }
+    }, 30)
+  }
+</script>
+
+</html>
